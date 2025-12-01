@@ -1,0 +1,134 @@
+/* Simple modern portfolio styles - responsive and accessible */
+
+:root{
+  --bg: #0f1724;
+  --card: #0b1220;
+  --muted: #9aa4b2;
+  --accent: #ff6b35; /* orange accent */
+  --accent-2: #ff9248;
+  --white: #ffffff;
+  --glass: rgba(255,255,255,0.03);
+  --max-width: 1100px;
+  --radius: 12px;
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  color-scheme: dark;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  background: linear-gradient(180deg,var(--bg), #07101a 120%);
+  color:var(--white);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+  padding-bottom:90rem;
+  padding-top:200px;
+}
+
+/* container */
+.container{
+  width:90%;
+  max-width:var(--max-width);
+  margin:0 auto;
+}
+
+/* header */
+.site-header{
+  padding:1rem 0;
+  position:fixed;
+  top:0;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(11,18,32,0.6), rgba(11,18,32,0.3));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  width:100%;
+}
+.header-inner{
+  display:flex;
+  gap:1rem;
+  align-items:center;
+  justify-content:space-between;
+}
+
+.brand{display:flex;gap:0.8rem;align-items:center}
+.logo{
+  width:56px;height:56px;border-radius:14px;
+  display:flex;align-items:center;justify-content:center;
+  font-weight:700;background:linear-gradient(135deg,var(--accent),var(--accent-2));
+  color:var(--card);box-shadow:0 6px 18px rgba(255,107,53,0.12);font-size:1.1rem;
+}
+.brand-text h1{margin:0;font-size:1.05rem}
+.brand-text .tagline{margin:0;color:var(--muted);font-size:0.9rem}
+
+/* buttons - Hire me */
+.btn-hire, .btn-hire-cta{
+  background: linear-gradient(90deg,var(--accent),var(--accent-2));
+  padding:0.6rem 1rem;border-radius:10px;color: var(--card);
+  text-decoration:none;font-weight:700;box-shadow:0 8px 30px rgba(255,107,53,0.14);
+}
+.btn-hire:focus, .btn-hire-cta:focus { outline:3px solid rgba(255,107,53,0.12) }
+
+/* main */
+.main{padding:2.2rem 0
+padding-top 120px;}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1fr;gap:1.6rem;align-items:center}
+@media(min-width:860px){ .intro{grid-template-columns:1fr 360px} }
+
+.intro-left h2{margin:0 0 0.4rem 0;font-size:2rem}
+.intro-left p{color:var(--muted);max-width:62ch}
+.meta{list-style:none;padding:0;margin:1rem 0;color:var(--muted)}
+.meta li{margin-bottom:0.4rem}
+.actions{display:flex;gap:0.6rem;margin-top:1rem}
+.btn-primary{background:transparent;border:2px solid rgba(255,255,255,0.06);padding:0.6rem 0.9rem;border-radius:10px;color:var(--white);text-decoration:none;font-weight:600}
+.btn-ghost{background:transparent;color:var(--muted);text-decoration:none;padding:0.6rem 0.9rem;border-radius:10px;border:1px solid rgba(255,255,255,0.02)}
+
+/* profile card */
+.profile-card{background:var(--glass);padding:1rem;border-radius:14px;text-align:center}
+.profile-card img{width:100%;height:auto;border-radius:10px;display:block}
+.profile-card .small{color:var(--muted);font-size:0.95rem;margin-top:0.7rem}
+
+/* work */
+.work{margin-top:2.2rem}
+.projects{display:grid;grid-template-columns:1fr;gap:1rem}
+@media(min-width:760px){ .projects{grid-template-columns:repeat(3,1fr)} }
+.project{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:1rem;border-radius:12px;border:1px solid rgba(255,255,255,0.02)}
+.project h4{margin:0 0 0.5rem 0}
+.project p{margin:0;color:var(--muted);font-size:0.95rem}
+
+/* skills */
+.skills{margin-top:1.8rem}
+.skill-list{display:flex;gap:0.6rem;flex-wrap:wrap}
+.skill-list span{background:rgba(255,255,255,0.03);padding:0.45rem 0.7rem;border-radius:999px;font-size:0.9rem;color:var(--muted)}
+
+/* contact CTA */
+.contact-cta{margin-top:2.4rem;padding:1.2rem;border-radius:12px;background:linear-gradient(90deg, rgba(255,107,53,0.06), rgba(255,146,72,0.02));display:flex;align-items:center;justify-content:space-between;gap:1rem}
+@media(max-width:560px){ .contact-cta{flex-direction:column;align-items:flex-start} }
+.contact-cta h3{margin:0}
+.btn-hire-cta{text-decoration:none;padding:0.6rem 1rem;border-radius:10px;font-weight:700}
+
+/* footer */
+.site-footer{margin-top:2.6rem;color:var(--muted);text-align:center}
+
+/* accessibility helpers */
+a{color:inherit}
+a:focus{outline:3px solid rgba(255,255,255,0.06);outline-offset:2px}
+/* Welcome message styling */
+.welcome {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff7a00; /* orange background */
+  color: white; /* text color */
+  padding: 15px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  z-index: 10000;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}

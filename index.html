@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>KentCollinz — Web Designer & Front-end Developer in Kampala</title>
+
+  <meta name="description"
+  content="Professional web designer & front-end developer based in Kampala. I create clean, responsive websites using HTML & CSS. View my work, skills, and contact me for web design services.">
+
+  <meta name="keywords"
+  content="web designer Kampala, front-end developer Uganda, website developer Kampala, HTML CSS developer, Uganda freelancer, KentCollinz">
+
+  <meta name="author" content="KentCollinz">
+
+  <!-- WhatsApp Preview (Open Graph Tags Only) - NO IMAGE -->
+  <meta property="og:title" content="KentCollinz — Web Designer in Kampala" />
+  <meta property="og:description" content="Need a clean, responsive website? View my projects and contact me for professional web design services." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://kentcollinz.github.io/my-portfolio/" />
+
+  <!-- Local SEO - Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "KentCollinz",
+    "jobTitle": "Web Designer & Front-end Developer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kampala",
+      "addressCountry": "Uganda"
+    },
+    "url": "https://kentcollinz.github.io/my-portfolio/",
+    "sameAs": [
+      "https://wa.me/755726429"
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Styled Welcome Message -->
+  <div id="welcome-message" class="welcome">
+    Welcome to KentCollinz Portfolio — Explore my work!
+  </div>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <div class="logo">KC</div>
+        <div class="brand-text">
+          <h1>KentCollinz — Web Designer & Front-end Developer in Kampala</h1>
+          <p class="tagline">Web Designer & Front-end dev</p>
+        </div>
+      </div>
+
+      <a class="btn-hire" href="https://wa.me/755726429?text=Hello%20KentCollinz%2C%20I%27m%20interested%20in%20hiring%20you.%20Please%20send%20me%20your%20availability."
+      target="_blank" rel="noopener noreferrer">
+        Hire me
+      </a>
+    </div>
+  </header>
+
+  <main class="container main">
+    <section class="intro">
+      <div class="intro-left">
+        <h2>Hello — I’m KentCollinz</h2>
+        <p>
+          I build clean, responsive websites and user-friendly interfaces. I specialize in HTML & CSS,
+          creating pixel-perfect designs that perform well on mobile and desktop.
+        </p>
+
+        <ul class="meta">
+          <li><strong>Location:</strong> Kampala, Uganda</li>
+          <li><strong>Focus:</strong> Front-end development, UI design</li>
+        </ul>
+
+        <div class="actions">
+          <a class="btn-primary" href="#work">View work</a>
+          <a class="btn-ghost" href="mailto:ck052783@gmail.com">Email me</a>
+        </div>
+      </div>
+
+      <div class="intro-right">
+        <div class="profile-card">
+          <p class="small">Let’s build something great together.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="work" class="work">
+      <h3>Selected Projects</h3>
+
+      <div class="projects">
+        <article class="project">
+          <h4>Clinic Website</h4>
+          <p>Responsive single-page site for a local clinic — appointment forms and contact info.</p>
+        </article>
+
+        <article class="project">
+          <h4>Personal Branding</h4>
+          <p>Logo, color system, and a multi-page portfolio layout for a creative professional.</p>
+        </article>
+
+        <article class="project">
+          <h4>Small Business Landing</h4>
+          <p>Conversion-focused landing page with clear call-to-action and fast load time.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="skills">
+      <h3>Skills</h3>
+      <div class="skill-list">
+        <span>HTML</span>
+        <span>CSS (Flexbox, Grid)</span>
+        <span>Responsive Design</span>
+        <span>Accessibility</span>
+      </div>
+    </section>
+
+    <section class="contact-cta">
+      <h3>Ready to start your project?</h3>
+      <a class="btn-hire-cta"
+      href="https://wa.me/755726429?text=Hello%20KentCollinz%2C%20I%27d%20like%20to%20talk%20about%20a%20project."
+      target="_blank"
+      rel="noopener noreferrer">
+        Hire me on WhatsApp
+      </a>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> KentCollinz — Built with ❤</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    const welcome = document.getElementById('welcome-message');
+    welcome.style.opacity = '1';
+    setTimeout(() => {
+      welcome.style.opacity = '0';
+    }, 4000);
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
